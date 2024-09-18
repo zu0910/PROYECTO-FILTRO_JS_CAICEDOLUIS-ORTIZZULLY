@@ -1,13 +1,50 @@
-
+@font-face{
+    src: url(../Fuentes/Roboto-Light.ttf);
+    font-family: light;
+}
+body{
+    background: linear-gradient(#171930,#363757);
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
 .botones{
     display: flex;
     background-color: #1a1c48;
     position: absolute;
     bottom: 0;
-    width: 15rem;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    width: 25rem;
+    height: 5rem;
     justify-content: space-evenly;
     left: 50%;
     transform: translateX(-50%);
+    font-family: light;
+    clip-path: polygon(6% 0, 94% 0, 100% 100%, 0% 100%);
+    padding: 0 4%;
 }
+.icons{
+    width: 20%;
+    margin-top: 3%;
+}
+.icons img{
+    width: 40%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.icons p{
+    margin: 0;
+    text-align: center;
+    color: white;
+}
+.actual::after{
+    position: absolute;
+    content: '';
+    width: 16%;
+    bottom: 8%;
+    border-radius: 2px;
+    height: 4%;
+    background-color: white;
+}
+

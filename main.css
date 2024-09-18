@@ -1,0 +1,42 @@
+@font-face {
+    font-family: bold;
+    src: url(Fuentes/Roboto-Bold.ttf);
+}
+@font-face {
+    font-family: regular;
+    src: url(Fuentes/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: light;
+    src: url(Fuentes/Roboto-Light.ttf);
+}
+body{
+    
+    margin: 0;
+    padding: 0;
+    background-color: #61648D;
+}
+#main{
+    display: grid;
+    grid-template-columns: 80% 20%;
+    color: white;
+    margin: 3rem 3rem;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}
+.title{
+    font-size: 6rem;
+    font-family: bold;
+}
+.sub-title{
+    font-family: regular;
+    font-size: 5rem;
+}
+p{
+    font-family: light;
+    font-size: 2rem;
+    width: 65rem;
+}

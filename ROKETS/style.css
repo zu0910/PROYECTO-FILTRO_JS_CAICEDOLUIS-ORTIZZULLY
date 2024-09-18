@@ -1,0 +1,13 @@
+
+.botones{
+    display: flex;
+    background-color: #1a1c48;
+    position: absolute;
+    bottom: 0;
+    width: 15rem;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    justify-content: space-evenly;
+    left: 50%;
+    transform: translateX(-50%);
+}

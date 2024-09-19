@@ -2,53 +2,156 @@
     font-family: bold;
     src: url(Fuentes/Roboto-Bold.ttf);
 }
+
 @font-face {
     font-family: regular;
     src: url(Fuentes/Roboto-Regular.ttf);
 }
+
 @font-face {
     font-family: light;
     src: url(Fuentes/Roboto-Light.ttf);
 }
-body{
+
+body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background: rgb(33, 33, 77);
+    background: linear-gradient(217deg, #13142D, rgba(255, 0, 0, 0) 100%),
+        linear-gradient(127deg, #13142D, #69AEFF 50.45%),
+        linear-gradient(127deg, #FFFFFF, #69AEFF 50.45%);
     width: 100vw;
-    height: 40vw;
+    height: 100vh;
     overflow: hidden;
+    background-size: cover;
 }
-#main{
+
+#main {
     display: grid;
     grid-template-columns: 80% 20%;
     color: white;
     margin: 3rem 7rem;
 }
-.left{
+
+.left {
     display: flex;
     flex-direction: column;
     text-align: start;
 }
-.title{
-    font-size: 5rem;
+
+.title {
+    font-size: clamp(1rem, 9vw, 6rem);
     font-family: bold;
 }
-.sub-title{
+
+.sub-title {
     font-family: light;
-    font-size: 5rem;
+    font-size: clamp(1rem, 8vw, 6rem);
 }
-p{
+
+p {
     font-family: light;
-    font-size: 1.8rem;
-    width: 60rem;
+    max-width: 72rem;
     padding-top: 1rem;
+    font-size: clamp(1rem, 2vw, 2.2rem);
 }
-.img img{
+
+img {
+    position: absolute;
+    width: 30vw;
+    right: 2vw;
+    filter: drop-shadow(1px 3px 30px #13142D);
+}
+
+.sombra {
+    position: absolute;
+    width: 33vw;
+    height: 5vw;
+    left: 67vw;
+    top: 46vw;
+
+    background: radial-gradient(50% 50% at 50% 50%, #000000 21.87%, rgba(0, 0, 0, 0) 100%);
+    mix-blend-mode: overlay;
+    filter: blur(12.5px);
+
+}
+
+.enter a {
+    text-decoration: none;
+    color: white;
+    font-family: bold;
+    font-size: clamp(1rem, 5vw, 3rem);
+}
+
+
+button{
+    background: #13142D;
+    color: #fff;
+    border: none;
     position: relative;
-    transform: rotate(-0.14turn);
-    right: 3rem;
-    top: 2rem;
-    width: clamp(30rem, 20vw, 10rem);
-    height: clamp(50rem, 30vw, 10rem);
+    height: 5vw;
+    padding: 1rem 2.5rem;
+    cursor: pointer;
+    outline: none;
+    border-radius: 70px;
+    margin-left: 24rem;
+}
+@media (max-width:431px){
+    body{
+        overflow: hidden;
+        background-size: cover;
+    }
+
+    .title {
+        width: 70vw;
+        margin-left: -3rem;
+    }
+    .sub-title {
+        width: 30rem;
+        margin-left: -3rem;
+    }
+    
+    p.text1 {
+        margin-left: -3rem;
+        width: 10rem;
+        padding-top: 2.5rem;
+        font-size: clamp(1rem, 2vw, 2.2rem);
+    }
+    p.text2{
+        width: 20rem;
+        margin-left: -4rem;
+    }
+    
+    img {
+        width: 52vw;
+        left: 13rem;
+        top: 10rem;
+    }
+    
+    .sombra {
+        position: absolute;
+        width: 10vw;
+        height: 5vw;
+        left: 2vw;
+        top: 4vw;
+    
+        background: radial-gradient(50% 50% at 50% 50%, #000000 21.87%, rgba(0, 0, 0, 0) 100%);
+        mix-blend-mode: overlay;
+        filter: blur(12.5px);
+    
+    }
+    
+    .enter{
+        margin-top: 2rem;
+    }
+    .enter a {
+        margin-left: -3.6rem;
+    }
+    
+    button{
+        height: 15vw;
+        padding-left: 6rem;
+        border-radius: 70px;
+        margin-left: 1rem;
+    }
 }

@@ -45,7 +45,8 @@ body{
     overflow-x: hidden;
     background: linear-gradient(#171930,#363757);
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
+    background-size: contain;
 }
 .botones{
     position: fixed;
@@ -104,8 +105,9 @@ h1{
 }
 .info1{
     width: 15rem;
-    height: 75vh;
+    height: 35rem;
     font-family: light;
+    overflow-y: scroll;
 }
 .info1 h2{
     font-family: regular;
@@ -127,7 +129,7 @@ h1{
 }
 .info3{
     width: 15rem;
-    height: 75vh;
+    height: 35rem;
     font-family: light;
 }
 h3{
@@ -169,7 +171,7 @@ progress{
     height: 100%;
 }
 .item__progress__bar {
-    margin: 1rem auto;
+    margin: 3rem auto;
     color: var(--color--five);
     display: flex;
     justify-content: center;
@@ -213,12 +215,35 @@ progress{
     font-weight: 700;
     text-align: end;
 }
+@media(max-width:880px){
+    .info2{
+        margin-top: 2rem;
+    }
+}
 @media(max-width:700px){
     .tres{
-        flex-direction: column;
+        display: block;
+    }
+    .info1{
+        margin: 0 auto;
+        height: 25rem;
     }
     .info2{
         min-width: 15rem;
         flex-direction: column;
+        margin: 2rem auto;
+    }
+    .parte1,.parte2,.parte3{
+        margin: 0 auto ;
+        width: 90%;
+    }
+    .carousel__item{
+        margin-top: 3rem;
+    }
+    .info3{
+        margin: 3rem auto;
+    }
+    .botones{
+        width: 20rem;
     }
 }

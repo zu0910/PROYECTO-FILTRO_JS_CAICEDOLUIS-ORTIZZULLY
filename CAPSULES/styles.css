@@ -1,0 +1,127 @@
+@font-face{
+    src: url(../Fuentes/Roboto-Light.ttf);
+    font-family: light;
+}
+@font-face{
+    src: url(../Fuentes/Roboto-Regular.ttf);
+    font-family: regular;
+}
+@font-face {
+    font-family: bold;
+    src: url(../Fuentes/Roboto-Bold.ttf);
+}
+:root{
+    --color--one: #14162C;
+    --color--one--rgba: #191b3fdf;
+    --color--two: #cfcfd1;
+    --color--three: #298bfe;
+    --color--four: #e52d2d;
+    --color--five: #ffffff;
+    --color--six: #ffd733;
+
+    --layout-description-container-x: 10px;
+    --layout-description-container-y: 10px;
+}
+
+*{
+    margin: 0;
+}
+*::-webkit-scrollbar {
+    height: 12px;
+    width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: var(--color--five);
+}
+
+*::-webkit-scrollbar-track:hover,
+*::-webkit-scrollbar-thumb:hover {
+    cursor: pointer;
+}
+
+*::-webkit-scrollbar-thumb {
+
+    border: 1px solid var(--color--five);
+    background-color: var(--color--one--rgba);
+}
+body{
+    overflow-x: hidden;
+    background: linear-gradient(#171930,#363757);
+    width: 100vw;
+    height: 100vh;
+}
+.botones{
+    position: fixed;
+    display: flex;
+    background-color: #1a1c48;
+    bottom: 0;
+    width: 25rem;
+    height: 5rem;
+    justify-content: space-evenly;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: light;
+    clip-path: polygon(6% 0, 94% 0, 100% 100%, 0% 100%);
+    padding: 0 4%;
+}
+.icons{
+    width: 20%;
+    margin-top: 3%;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+    position: relative;
+}
+.icons img{
+    width: 40%;
+}
+.icons p{
+    margin: 0;
+    text-align: center;
+    color: white;
+}
+.actual{
+    margin: 0;
+}
+.actual::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    left: 0;
+    bottom: 8%;
+    border-radius: 2px;
+    height: 4%;
+    background-color: white;
+}
+#all{
+    display: flex;
+}
+#right{
+    background-color: #ffffff;
+    width: 25vw;
+    height: 100vh;
+}
+#center{
+    background-color: #f5cfcf;
+    width: 70vw;
+    height: 100vh;
+}
+.name{
+    text-align: center;
+    margin: 3rem 0;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-family: bold;
+}
+#logo{
+    width: 20vw;
+    height: 20vw;
+    background-color: #1a1c48;
+    margin: 15rem auto;
+    border-radius: 100%;
+}
+#left{
+    background-color: #978a8a;
+    width: 25vw;
+    height: 100vh;
+}

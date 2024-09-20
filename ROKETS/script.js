@@ -64,8 +64,15 @@ function roket(){
         <div class="seccion">
             <img src="../icons/mech.svg" alt="">
             <div class="texto">
+                <h2>Success rate pct</h2>
+                <p>${info[cohete].success_rate_pct}</p>
+            </div>
+        </div>
+        <div class="seccion">
+            <img src="../icons/mech.svg" alt="">
+            <div class="texto">
                 <h2>Read more about the coete</h2>
-                <p>${info[cohete].first_flight}</p>
+                <a href="${info[cohete].wikipedia}" style="color:white">Wikipedia</a>
             </div>
         </div>
         `;
@@ -105,6 +112,26 @@ function roket(){
                     <span>${info[cohete].landing_legs.material}</span>
                 </div>
             </div>
+            <div class="info_rocket">
+                <h3>FIRST STAGE</h3>
+                <div>
+                    <p>Reusable</p>
+                    <span>${info[cohete].first_stage.reusable}</span>
+                </div>
+                <div>
+                    <p>Engines
+                    </p>
+                    <span>${info[cohete].first_stage.engines}</span>
+                </div>
+                <div>
+                    <p>Fuel Amount Tons</p>
+                    <span>${info[cohete].first_stage.fuel_amount_tons}</span>
+                </div>
+                <div>
+                    <p>Burn Time Sec</p>
+                    <span>${info[cohete].first_stage.burn_time_sec}</span>
+                </div>
+            </div>
         </div>
         <div class="parte2">
         </div>
@@ -128,7 +155,7 @@ function roket(){
             <h3>ENGINE INFORMATION</h3>
             <div>
                 <p>Type</p>
-                <span>${info[cohete].engines.type}</span>
+                <span>${info[cohete].engines.type}-${info[cohete].engines.version}</span>
             </div>
             <div>
                 <p>Maximum power loss</p>
@@ -151,7 +178,78 @@ function roket(){
                 <span>${info[cohete].engines.propellant_2}</span>
             </div>
         </div>
+        <div class="info_rocket">
+            <h3>SECOND STAGE</h3>
+            <div>
+                <p>Thurst kn</p>
+                <span>${info[cohete].second_stage.thrust.kN}</span>
+            </div>
+            <div>
+                <p>Thurst lbf</p>
+                <span>${info[cohete].second_stage.thrust.lbf}</span>
+            </div>
+            <div>
+                <p>option_1</p>
+                <span>${info[cohete].second_stage.payloads.option_1}</span>
+            </div>
+        </div>
         `;
+        document.querySelector('.info3').innerHTML=`
+        <div class="information__container">
+            <div>
+                <h3>Rocket weight :</h3>
+            </div>
+            <div class="valores">
+                <progress max="1420788" value="${info[cohete].mass.kg}">1420788%</progress>
+                <span>${info[cohete].mass.kg} kg <br> ${info[cohete].mass.lb} lb</span>
+            </div>
+        </div>
+        <div class="information__container">
+            <div>
+                <h3>Low Earth Orbit :</h3>
+            </div>
+            <div class="valores">
+                <progress max="150000" value="${info[cohete].payload_weights[0].kg}">1420788%</progress>
+                <span>${info[cohete].payload_weights[0].kg} kg <br> ${info[cohete].payload_weights[0].lb} lb</span>
+            </div>
+        </div>
+        <div class="information__container">
+            <div>
+                <h3>Rocket Height :</h3>
+            </div>
+            <div class="valores">
+                <progress max="118" value="${info[cohete].height.meters}">1420788%</progress>
+                <span>${info[cohete].height.meters} M <br> ${info[cohete].height.feet} F</span>
+            </div>
+        </div>
+        <div class="information__container">
+            <div>
+                <h3>Rocket diameter :</h3>
+            </div>
+            <div class="valores">
+                <progress max="12.2" value="${info[cohete].diameter.meters}">1420788%</progress>
+                <span>${info[cohete].diameter.meters} kg <br> ${info[cohete].diameter.feet} lb</span>
+            </div>
+        </div>
+        <div class="information__container">
+            <div>
+                <h3>Diameter rocket shield :</h3>
+            </div>
+            <div class="valores">
+                <progress max="5.2" value="${info[cohete].diameter.meters}">1420788%</progress>
+                <span>${info[cohete].diameter.meters} kg <br> ${info[cohete].diameter.feet} lb</span>
+            </div>
+        </div>
+        <div class="information__container">
+            <div>
+                <h3>Height rocket shield :</h3>
+            </div>
+            <div class="valores">
+                <progress max="13.1" value="${info[cohete].second_stage.payloads.composite_fairing.diameter.meters}">1420788%</progress>
+                <span>${info[cohete].second_stage.payloads.composite_fairing.diameter.meters} M <br> ${info[cohete].second_stage.payloads.composite_fairing.diameter.feet} F</span>
+            </div>
+        </div>
+        `
     });
 }
 roket()

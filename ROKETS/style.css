@@ -73,6 +73,9 @@ body{
 .icons img{
     width: 40%;
 }
+.icons a{
+    text-decoration: none;
+}
 .icons p{
     margin: 0;
     text-align: center;
@@ -152,12 +155,15 @@ progress{
 .parte1{
     width: 20%;
     height: 100%;
+    padding-bottom: 2rem;
 }
 .parte2{
     width: 40%;
     display: flex;
     overflow-x: scroll;
     gap: 1rem;
+    align-items: center;
+    height: 30rem;
 }
 .carousel__item{
     margin-top: 15rem;
@@ -169,6 +175,7 @@ progress{
 .parte3{
     width: 20%;
     height: 100%;
+    padding-bottom: 2rem;
 }
 .item__progress__bar {
     margin: 3rem auto;
@@ -222,7 +229,7 @@ progress{
     bottom: 5rem;
     display: flex;
     border-radius: 10px;
-    border: solid white;
+    border: solid rgb(255, 255, 255);
     overflow: hidden;
 }
 .paginacion button{

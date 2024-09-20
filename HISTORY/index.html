@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="principal">
+        <div class="titulo"></div>
+        <div class="details"></div>
+        <div class="events1"></div>
+        <div class="events2"></div>
+        <div class="article"></div>
+    </div>
+    <div class="paginacion">
+        <button id="prew" onclick="prew()"><</button>
+        <button id="numero" onmouseover="cambiar()" data-id="1">1</button>
+        <button id="numero" onmouseover="cambiar()" data-id="2">2</button>
+        <button id="numero" onmouseover="cambiar()" data-id="3">3</button>
+        <button id="next" onclick="next()">></button>
+    </div>
+    <div class="botones">
+        <button onclick="roket()" class="icons">
+            <a href="../ROKETS/index.html">
+                <img src="../icons/rocket.svg" alt="">
+                <p>Rockets</p>
+            </a>
+        </button>
+        <button class="icons">
+            <a href="../CAPSULES/inde.html">
+                <img src="../icons/capsule.svg" alt="">
+                <p>Capsules</p>
+            </a>
+        </button>
+        <button class="icons"><img src="../icons/mech.svg" alt="">
+            <p>Conpany</p>
+        </button>
+        <button class="icons actual"><img src="../icons/prop.svg" alt="">
+            <p>History</p>
+        </button>
+    </div>
+</body>
+<script src="./script.js"></script>
+</html>

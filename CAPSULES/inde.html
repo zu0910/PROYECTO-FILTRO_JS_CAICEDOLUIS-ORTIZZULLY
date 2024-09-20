@@ -9,23 +9,41 @@
 <body>
     <div class="main">
         <div id="all">
-            <div id="right"></div>
+            <div id="right">
+                <div class="contenido">
+                    <div class="conte1">reuse_count</div>
+                    <div class="conte2">water_landings</div>
+                    <div class="conte3">land_landings</div>
+                </div>
+                <div id="imagenes"></div>
+            </div>
             <div id="center">
-                <div class="name">COTS 1</div>
-                <div id="logo"></div>
+                <div id="import">
+                    <div id="name">COTS 1</div>
+                    <div id="logo"></div>
+                    <div id="information">
+                        <div class="uno">holi</div>
+                        <div class="dos">holi</div>
+                        <div class="tres">holi</div>
+                    </div>
+                </div>
+                
             </div>
             <div id="left">
-                <div class="direction">
-                    <nav class="nav__information">
-                        <div id="information__2" class="information__item">
-                            <div class="load"></div>
-                            <div class="load"></div>
-                            <div class="load"></div>
-                            <div class="load"></div>
-                            <div class="load"></div>
-                        </div>
-                        <div id="paginacion" class="information__buttom"></div>
-                    </nav>
+                <div class="last_up">Hanging in atrium at SpaceX HQ in Hawthorne</div>
+                <div id="infor">
+                    <div class="info">c101</div>
+                    <div class="info">retired</div>
+                    <div class="info">Dragon</div>
+                </div>
+                <div class="descrip"></div>
+                <div class="paginacion">
+                    <button id="prew" onclick="prew()"><</button>
+                    <button id="numero" onmouseover="cambiar()" data-id="1">1</button>
+                    <button id="numero" onmouseover="cambiar()" data-id="2">2</button>
+                    <button id="numero" onmouseover="cambiar()" data-id="3">3</button>
+                    <button id="numero" onmouseover="cambiar()" data-id="4">4</button>
+                    <button id="next" onclick="next()">></button>
                 </div>
             </div>
         </div>
@@ -45,4 +63,16 @@
         </button>
     </div>
 </body>
+<script src="script.js"></script>
 </html>
+<!-- "reuse_count": 0,
+                "water_landings": 1,
+                "land_landings": 0,
+                "last_update": "Hanging in atrium at SpaceX HQ in Hawthorne ",
+                "launches": [
+                "5eb87cdeffd86e000604b330"
+                ],
+                "serial": "C101",
+                "status": "retired",
+                "type": "Dragon 1.0",
+                "id": "5e9e2c5bf35918ed873b2664" -->

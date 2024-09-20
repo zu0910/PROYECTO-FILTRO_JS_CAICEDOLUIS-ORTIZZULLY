@@ -96,32 +96,103 @@ body{
 }
 #all{
     display: flex;
+    justify-content: center;
+    text-align: center;
 }
 #right{
-    background-color: #ffffff;
     width: 25vw;
     height: 100vh;
 }
+.conte1{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 0 8rem;
+    margin-top: 7rem;
+    width: 20rem;
+    height: 2rem;
+    background-color: #cfcfd1; 
+}
+.conte2{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 0 8rem;
+    margin-top: 3rem;
+    width: 20rem;
+    height: 2rem;
+    background-color: #cfcfd1; 
+}
+.conte3{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 0 8rem;
+    margin-top: 3rem;
+    width: 20rem;
+    height: 2rem;
+    background-color: #cfcfd1; 
+}
+#imagenes{
+    width: 20vw;
+    height: 20vw;
+    background-color: #363757;
+    margin: 9rem 6rem;
+}
 #center{
-    background-color: #f5cfcf;
     width: 70vw;
     height: 100vh;
 }
-.name{
-    text-align: center;
-    margin: 3rem 0;
+#import{
+    width: 28rem;
+    height: 28rem;
+    margin: 16rem 17rem;
+}
+#name{
+    color: white;
     font-size: clamp(2rem, 5vw, 3rem);
     font-family: bold;
 }
 #logo{
-    width: 20vw;
-    height: 20vw;
-    background-color: #1a1c48;
-    margin: 15rem auto;
+    position: relative;
+    width: 20rem;
+    height: 20rem;
+    margin: 2rem 4rem;
     border-radius: 100%;
+    background-color: #e52d2d;
+}
+#information{
+    margin-top: 4rem;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 #left{
-    background-color: #978a8a;
     width: 25vw;
     height: 100vh;
+}
+.last_up{
+    color: white;
+    width: 20rem;
+    margin-left: -8rem;
+    margin-top: 10rem;
+    height: 3rem;
+    background-color: #999393;
+   
+}
+.info{
+    color: white;
+    width: 20rem;
+    height: 5rem;
+    margin-left: -17rem;
+    margin-top: 2rem;
+}
+
+.paginacion{
+    width: 11rem;
+    height: 1.3rem;
+    margin-left: -1rem;
+    margin-top: 28rem;
+    background-color: #cfcfd1;
 }

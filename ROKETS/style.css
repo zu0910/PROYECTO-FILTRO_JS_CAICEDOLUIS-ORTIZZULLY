@@ -215,6 +215,25 @@ progress{
     font-weight: 700;
     text-align: end;
 }
+.paginacion{
+    position: absolute;
+    position: fixed;
+    right: 2rem;
+    bottom: 5rem;
+    display: flex;
+    border-radius: 10px;
+    border: solid white;
+    overflow: hidden;
+}
+.paginacion button{
+    color: white;
+    padding: 0.5rem 0.7rem;
+    background-color: #1a1c48;
+    border: none;
+}
+.paginacion button:hover{
+    background-color: #298bfe;
+}
 @media(max-width:880px){
     .info2{
         margin-top: 2rem;

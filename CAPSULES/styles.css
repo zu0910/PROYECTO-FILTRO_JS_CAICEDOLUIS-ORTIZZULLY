@@ -103,6 +103,10 @@ body{
     width: 25vw;
     height: 100vh;
 }
+.contenido{
+    font-size: clamp(2rem, 5vw, 2rem);
+    font-family: bold;
+}
 .conte1{
     color: white;
     display: flex;
@@ -111,7 +115,6 @@ body{
     margin-top: 7rem;
     width: 20rem;
     height: 2rem;
-    background-color: #cfcfd1; 
 }
 .conte2{
     color: white;
@@ -121,7 +124,6 @@ body{
     margin-top: 3rem;
     width: 20rem;
     height: 2rem;
-    background-color: #cfcfd1; 
 }
 .conte3{
     color: white;
@@ -131,7 +133,6 @@ body{
     margin-top: 3rem;
     width: 20rem;
     height: 2rem;
-    background-color: #cfcfd1; 
 }
 #imagenes{
     width: 20vw;
@@ -167,6 +168,9 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    color: white;
+    font-size: bold;
+    font-size: clamp(1rem, 5vw, 2rem);
 }
 #left{
     width: 25vw;
@@ -178,21 +182,21 @@ body{
     margin-left: -8rem;
     margin-top: 10rem;
     height: 3rem;
-    background-color: #999393;
+    font-size: clamp(1rem, 3vw, 2rem);
    
 }
-.info{
+#history{
     color: white;
     width: 20rem;
-    height: 5rem;
-    margin-left: -17rem;
-    margin-top: 2rem;
+    height: 15rem;
+    background-color: wheat;
+    margin: 8rem -7rem;
 }
 
 .paginacion{
     width: 11rem;
     height: 1.3rem;
     margin-left: -1rem;
-    margin-top: 28rem;
+    margin-top: 20rem;
     background-color: #cfcfd1;
 }

@@ -46,6 +46,7 @@
     background-color: var(--color--one--rgba);
 }
 body{
+    flex-wrap: wrap;
     overflow-x: hidden;
     background: linear-gradient(#171930,#363757);
     width: 100vw;
@@ -98,16 +99,17 @@ body{
     display: flex;
     justify-content: center;
     text-align: center;
+
 }
 #right{
     width: 25vw;
     height: 100vh;
 }
 .contenido{
-    font-size: clamp(2rem, 5vw, 2rem);
-    font-family: bold;
+    font-size: clamp(2rem, 5vw, 1.5rem);
+    font-family: regular;
 }
-.conte1{
+.reuse{
     color: white;
     display: flex;
     flex-direction: column;
@@ -116,7 +118,7 @@ body{
     width: 20rem;
     height: 2rem;
 }
-.conte2{
+.water{
     color: white;
     display: flex;
     flex-direction: column;
@@ -125,7 +127,7 @@ body{
     width: 20rem;
     height: 2rem;
 }
-.conte3{
+.land{
     color: white;
     display: flex;
     flex-direction: column;
@@ -137,8 +139,15 @@ body{
 #imagenes{
     width: 20vw;
     height: 20vw;
-    background-color: #363757;
-    margin: 9rem 6rem;
+    display: flex;
+    overflow-x: scroll;
+    gap: 1rem;
+    align-items: center;
+    margin: 2rem 8rem;
+}
+#imagenes img{
+    width: 20vw;
+    height: 15vw;
 }
 #center{
     width: 70vw;
@@ -147,7 +156,7 @@ body{
 #import{
     width: 28rem;
     height: 28rem;
-    margin: 16rem 17rem;
+    margin: 10rem 11rem;
 }
 #name{
     color: white;
@@ -160,10 +169,10 @@ body{
     height: 20rem;
     margin: 2rem 4rem;
     border-radius: 100%;
-    background-color: #e52d2d;
+    filter: drop-shadow(3px 4px 15px  white);
 }
 #information{
-    margin-top: 4rem;
+    margin-top: -4rem;
     text-align: center;
     display: flex;
     flex-direction: row;
@@ -178,25 +187,45 @@ body{
 }
 .last_up{
     color: white;
-    width: 20rem;
-    margin-left: -8rem;
+    font-family: regular;
+    width: 23rem;
+    margin-left: -10rem;
     margin-top: 10rem;
     height: 3rem;
-    font-size: clamp(1rem, 3vw, 2rem);
+    font-size: clamp(1rem, 3vw, 1.5rem);
    
 }
-#history{
+#details{
+    font-family: light;
     color: white;
     width: 20rem;
     height: 15rem;
-    background-color: wheat;
-    margin: 8rem -7rem;
+    margin: 10rem -9rem;
 }
 
-.paginacion{
+/* .paginacion{
     width: 11rem;
     height: 1.3rem;
     margin-left: -1rem;
     margin-top: 20rem;
     background-color: #cfcfd1;
+} */
+.paginacion{
+    position: absolute;
+    position: fixed;
+    right: 5rem;   
+    bottom: 4rem;
+    display: flex;
+    border-radius: 10px;
+    border: solid rgb(255, 255, 255);
+    overflow: hidden;
+}
+.paginacion button{
+    color: white;
+    padding: 0.5rem 0.7rem;
+    background-color: #1a1c48;
+    border: none;
+}
+.paginacion button:hover{
+    background-color: #298bfe;
 }

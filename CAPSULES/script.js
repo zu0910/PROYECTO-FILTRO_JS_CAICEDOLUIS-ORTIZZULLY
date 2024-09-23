@@ -65,37 +65,69 @@ function capsule(){
         <p>${cap[cohete].last_update}</p>
 
         `
-        const capsuleId = cap[cohete].id;
-        document.querySelector("#logo").innerHTML = "";
-        fetch(`https://api.spacexdata.com/v4/launches`)
-            .then(res => res.json())
-            .then(launches => {
-                const laun = launches.find(launch => launch.capsules.includes(capsuleId));
-
-                document.querySelector("#name").innerHTML=`
-                <p> ${laun.name} </p>
-                `
-                document.querySelector("#logo").innerHTML = `
-                <img src="${laun.links.patch.small}">
-                `;
-
-                document.querySelector("#details").innerHTML=`
-                <p> ${laun.details}</p>
-                `
-
-
-                let carouselHTML = ''; // Almacena todas las imágenes temporalmente
-
-                laun.links.flickr.original.forEach((img) => {
-                    carouselHTML += `
-                        <div class="carousel__item">
-                            <img src="${img}" referrerpolicy="no-referrer">
+        console.log(cap[cohete].launches);
+        
+        document.getElementById("left").innerHTML=""
+        for (const id of cap[cohete].launches){
+            fetch("https://api.spacexdata.com/v4/launches/"+id)
+            .then( res => res.json())
+            .then( lanza => {
+                console.log(lanza);
+                document.getElementById("left").innerHTML+=`
+                <div id="lanzamientos">
+                    <div id="info_lanzamiento">
+                        <div id="import">
+                            <div id="logo">
+                            <img src="${lanza.links.patch.small}">
+                            </div>
+                            <div id="name"></div>
                         </div>
-                    `;
-                });
+                        <div id="details"></div>
+                    </div>
+                    <div id="pictures">
+                        <div id="imagen"></div>
+                            <div id="imagenes"></div>
+                        </div>
+                    </div>
+                </div>
+                `
+            })
+        }
+        
+            
+        
+        
+        // const capsuleId = cap[cohete].id;
+        // document.querySelector("#logo").innerHTML = "";
+        // fetch(`https://api.spacexdata.com/v4/launches`)
+        //     .then(res => res.json())
+        //     .then(launches => {
+        //         const laun = launches.find(launch => launch.capsules.includes(capsuleId));
+
+        //         document.querySelector("#name").innerHTML=`
+        //         <p> ${laun.name} </p>
+        //         `
+        //         document.querySelector("#logo").innerHTML = `
+        //         <img src="${laun.links.patch.small}">
+        //         `;
+
+        //         document.querySelector("#details").innerHTML=`
+        //         <p> ${laun.details}</p>
+        //         `
+
+
+        //         let carouselHTML = ''; // Almacena todas las imágenes temporalmente
+
+        //         laun.links.flickr.original.forEach((img) => {
+        //             carouselHTML += `
+        //                 <div class="carousel__item">
+        //                     <img src="${img}" referrerpolicy="no-referrer">
+        //                 </div>
+        //             `;
+        //         });
                 
-                document.querySelector("#imagenes").innerHTML = carouselHTML; 
-            });
+        //         document.querySelector("#imagenes").innerHTML = carouselHTML; 
+        //     });
     })
 
 }

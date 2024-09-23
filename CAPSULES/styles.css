@@ -97,9 +97,7 @@ body{
 }
 #all{
     display: flex;
-    justify-content: center;
     text-align: center;
-
 }
 #right{
     width: 25vw;
@@ -136,43 +134,9 @@ body{
     width: 20rem;
     height: 2rem;
 }
-#imagenes{
-    width: 20vw;
-    height: 20vw;
-    display: flex;
-    overflow-x: scroll;
-    gap: 1rem;
-    align-items: center;
-    margin: 2rem 8rem;
-}
-#imagenes img{
-    width: 20vw;
-    height: 15vw;
-}
-#center{
-    width: 70vw;
-    height: 100vh;
-}
-#import{
-    width: 28rem;
-    height: 28rem;
-    margin: 10rem 11rem;
-}
-#name{
-    color: white;
-    font-size: clamp(2rem, 5vw, 3rem);
-    font-family: bold;
-}
-#logo{
-    position: relative;
-    width: 20rem;
-    height: 20rem;
-    margin: 2rem 4rem;
-    border-radius: 100%;
-    filter: drop-shadow(3px 4px 15px  white);
-}
+
+
 #information{
-    margin-top: -4rem;
     text-align: center;
     display: flex;
     flex-direction: row;
@@ -182,9 +146,60 @@ body{
     font-size: clamp(1rem, 5vw, 2rem);
 }
 #left{
-    width: 25vw;
-    height: 100vh;
+    overflow-x: scroll;
+    height: 40rem;
+    border: solid white;
 }
+#lanzamientos{
+    width: 75rem;
+    display: flex;
+    border: solid white;
+}
+#info_lanzamiento{
+    width: 50%;
+}
+#import{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    height: 5rem;
+    width: 100%;
+}
+#name{
+    color: white;
+    font-size: clamp(2rem, 5vw, 2rem);
+    font-family: bold;
+}
+#logo img{
+    width: 3rem;
+    filter: drop-shadow(3px 4px 15px  white);
+}
+#details{
+    font-family: light;
+    font-size: 1.3rem;
+    color: white;
+    padding: 2rem;
+    text-align: start;
+}
+#pictures{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+#imagenes{
+    width: 20vw;
+    height: 20vw;
+    display: flex;
+    overflow-x: scroll;
+    gap: 1rem;
+    align-items: center;
+}
+#imagenes img{
+    width: 20vw;
+    height: 15vw;
+}
+
 .last_up{
     color: white;
     font-family: regular;
@@ -195,13 +210,7 @@ body{
     font-size: clamp(1rem, 3vw, 1.5rem);
    
 }
-#details{
-    font-family: light;
-    color: white;
-    width: 20rem;
-    height: 15rem;
-    margin: 10rem -9rem;
-}
+
 
 /* .paginacion{
     width: 11rem;

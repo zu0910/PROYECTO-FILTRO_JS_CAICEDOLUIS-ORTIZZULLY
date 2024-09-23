@@ -100,42 +100,22 @@ body{
     text-align: center;
 }
 #right{
-    width: 25vw;
-    height: 100vh;
+    
+    width: 35rem;
+    height: 100rem;
 }
 .contenido{
-    font-size: clamp(2rem, 5vw, 1.5rem);
-    font-family: regular;
-}
-.reuse{
-    color: white;
+    border: 2px solid white;
+    margin: 4rem 5rem;
+    padding: 1rem;
+    width: 25rem;
+    font-size: clamp(1rem, 5vw, 1.3rem);
     display: flex;
     flex-direction: column;
-    margin: 0 8rem;
-    margin-top: 7rem;
-    width: 20rem;
-    height: 2rem;
-}
-.water{
+    justify-content: space-around;
+    font-family: light;
     color: white;
-    display: flex;
-    flex-direction: column;
-    margin: 0 8rem;
-    margin-top: 3rem;
-    width: 20rem;
-    height: 2rem;
 }
-.land{
-    color: white;
-    display: flex;
-    flex-direction: column;
-    margin: 0 8rem;
-    margin-top: 3rem;
-    width: 20rem;
-    height: 2rem;
-}
-
-
 #information{
     text-align: center;
     display: flex;
@@ -145,15 +125,26 @@ body{
     font-size: bold;
     font-size: clamp(1rem, 5vw, 2rem);
 }
+.last_up{
+    color: white;
+    font-family: regular;
+    border: 2px solid white;
+    margin-left: 5rem;
+    width: 25rem;
+    padding: 1rem;
+    font-size: clamp(1rem, 3vw, 1.2rem);
+}
 #left{
-    overflow-x: scroll;
-    height: 40rem;
-    border: solid white;
+    margin-top: 4rem;
+    overflow-y: scroll;
+    height: 44rem;
+    border: 1px solid white;
 }
 #lanzamientos{
+    padding: 2rem;
+    border: 0.1px solid white;
     width: 75rem;
     display: flex;
-    border: solid white;
 }
 #info_lanzamiento{
     width: 50%;
@@ -172,7 +163,7 @@ body{
     font-family: bold;
 }
 #logo img{
-    width: 3rem;
+    width: 5rem;
     filter: drop-shadow(3px 4px 15px  white);
 }
 #details{
@@ -187,7 +178,12 @@ body{
     display: flex;
     justify-content: center;
 }
-#imagenes{
+.parte3{
+    width: 20%;
+    height: 100%;
+    padding-bottom: 2rem;
+}
+.imagenes{
     width: 20vw;
     height: 20vw;
     display: flex;
@@ -195,30 +191,13 @@ body{
     gap: 1rem;
     align-items: center;
 }
-#imagenes img{
+.imagenes img{
     width: 20vw;
     height: 15vw;
 }
 
-.last_up{
-    color: white;
-    font-family: regular;
-    width: 23rem;
-    margin-left: -10rem;
-    margin-top: 10rem;
-    height: 3rem;
-    font-size: clamp(1rem, 3vw, 1.5rem);
-   
-}
 
 
-/* .paginacion{
-    width: 11rem;
-    height: 1.3rem;
-    margin-left: -1rem;
-    margin-top: 20rem;
-    background-color: #cfcfd1;
-} */
 .paginacion{
     position: absolute;
     position: fixed;

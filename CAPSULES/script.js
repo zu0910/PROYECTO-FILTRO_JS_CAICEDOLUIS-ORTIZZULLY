@@ -6,9 +6,9 @@ function cambiar(){
     numeros.forEach(e=>{
         e.addEventListener('click',()=>{
             cohete=e.getAttribute('data-id')-1;
-            capsule();
         });
     });
+    capsule();
 }
 function next(){
     let numeros = document.querySelectorAll('#numero');
@@ -36,7 +36,7 @@ function prew(){
 }
 
 function capsule(){
-    fetch("https://api.spacexdata.com/v4/capsules")
+    fetch("https://api.spacexdata.com/v4/capsules/")
     .then( res => res.json())
     .then(cap => {
         len_data=cap.length;
@@ -65,10 +65,12 @@ function capsule(){
         <p>${cap[cohete].last_update}</p>
 
         `
-        console.log(cap[cohete].launches);
-        
+        let numero = 0;
         document.getElementById("left").innerHTML=""
+        
         for (const id of cap[cohete].launches){
+            
+            let id_img = "imagenes"+numero;
             fetch("https://api.spacexdata.com/v4/launches/"+id)
             .then( res => res.json())
             .then( lanza => {
@@ -80,54 +82,24 @@ function capsule(){
                             <div id="logo">
                             <img src="${lanza.links.patch.small}">
                             </div>
-                            <div id="name"></div>
+                            <div id="name">${lanza.name}</div>
                         </div>
-                        <div id="details"></div>
+                        <div id="details">${lanza.details}</div>
                     </div>
                     <div id="pictures">
-                        <div id="imagen"></div>
-                            <div id="imagenes"></div>
+                            <div id="${id_img}" class="imagenes"></div>
                         </div>
                     </div>
                 </div>
                 `
+                for (const img of lanza.links.flickr.original){
+                    document.getElementById(id_img).innerHTML+=`
+                    <div class="carousel__item"><img src="${img}" referrerpolicy="no-referrer"></div>
+                    `
+                }
             })
+            numero+=1;
         }
-        
-            
-        
-        
-        // const capsuleId = cap[cohete].id;
-        // document.querySelector("#logo").innerHTML = "";
-        // fetch(`https://api.spacexdata.com/v4/launches`)
-        //     .then(res => res.json())
-        //     .then(launches => {
-        //         const laun = launches.find(launch => launch.capsules.includes(capsuleId));
-
-        //         document.querySelector("#name").innerHTML=`
-        //         <p> ${laun.name} </p>
-        //         `
-        //         document.querySelector("#logo").innerHTML = `
-        //         <img src="${laun.links.patch.small}">
-        //         `;
-
-        //         document.querySelector("#details").innerHTML=`
-        //         <p> ${laun.details}</p>
-        //         `
-
-
-        //         let carouselHTML = ''; // Almacena todas las imágenes temporalmente
-
-        //         laun.links.flickr.original.forEach((img) => {
-        //             carouselHTML += `
-        //                 <div class="carousel__item">
-        //                     <img src="${img}" referrerpolicy="no-referrer">
-        //                 </div>
-        //             `;
-        //         });
-                
-        //         document.querySelector("#imagenes").innerHTML = carouselHTML; 
-        //     });
     })
 
 }

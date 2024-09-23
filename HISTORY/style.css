@@ -89,17 +89,16 @@ body{
     bottom: 5rem;
     display: flex;
     border-radius: 10px;
-    border: solid rgb(255, 255, 255);
     overflow: hidden;
 }
 .paginacion button{
     color: white;
     padding: 0.5rem 0.7rem;
-    background-color: #1a1c48;
+    background-color: inherit;
     border: none;
 }
 .paginacion button:hover{
-    background-color: #298bfe;
+    background-color: #191b3fdf;
 }
 .titulo{
     color: white;
@@ -121,7 +120,7 @@ h2{
     color: rgb(169, 169, 169);
 }
 #pag{
-    background-color: #2930fe;
+    background-color: #14162C;
 }
 .article{
     padding-left: 3rem;

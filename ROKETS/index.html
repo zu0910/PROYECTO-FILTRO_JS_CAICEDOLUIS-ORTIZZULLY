@@ -26,13 +26,14 @@
     </div>
     <div class="paginacion">
         <button id="prew" onclick="prew()"><</button>
-        <button id="numero" onmouseover="cambiar()" data-id="1">1</button>
-        <button id="numero" onmouseover="cambiar()" data-id="2">2</button>
-        <button id="numero" onmouseover="cambiar()" data-id="3">3</button>
+        <button class="numero" onmouseover="cambiar()" data-id="1">1</button>
+        <button class="numero" onmouseover="cambiar()" data-id="2">2</button>
+        <button class="numero" onmouseover="cambiar()" data-id="3">3</button>
         <button id="next" onclick="next()">></button>
     </div>
     <div class="botones">
-        <button onclick="roket()" class="icons actual"><img src="../icons/rocket.svg" alt="">
+        <button class="icons actual">
+            <img src="../icons/rocket.svg" alt="">
             <p>Rockets</p>
         </button>
         <button class="icons">
@@ -41,11 +42,17 @@
                 <p>Capsules</p>
             </a>
         </button>
-        <button class="icons"><img src="../icons/mech.svg" alt="">
-            <p>Conpany</p>
+        <button class="icons">
+            <a href="../COMPANY/index.html">
+                <img src="../icons/mech.svg" alt="">
+                <p>Conpany</p>
+            </a>
         </button>
-        <button class="icons"><img src="../icons/prop.svg" alt="">
-            <p>History</p>
+        <button class="icons">
+            <a href="../HISTORY/index.html">
+                <img src="../icons/prop.svg" alt="">
+                <p>History</p>
+            </a>
         </button>
     </div>
 </body>

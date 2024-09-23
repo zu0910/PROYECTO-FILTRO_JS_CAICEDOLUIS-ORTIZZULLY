@@ -1,7 +1,18 @@
 let cohete=0;
 let len_data;
+function pag_actual(){
+    let numeros = document.querySelectorAll('.numero');
+    numeros.forEach(e=>{
+        if (e.getAttribute('data-id')-1==cohete) {
+            e.setAttribute('id','pag');
+        }
+        else{
+            e.removeAttribute('id');
+        }
+    });
+}
 function cambiar(){
-    let numeros = document.querySelectorAll('#numero');
+    let numeros = document.querySelectorAll('.numero');
     numeros.forEach(e=>{
         e.addEventListener('click',()=>{
             cohete=e.getAttribute('data-id')-1;
@@ -10,7 +21,7 @@ function cambiar(){
     });
 }
 function next(){
-    let numeros = document.querySelectorAll('#numero');
+    let numeros = document.querySelectorAll('.numero');
     let contador = Number(numeros[0].getAttribute('data-id'));
     let max = Number(numeros[2].getAttribute('data-id'));
     if (max<len_data) { 
@@ -20,9 +31,10 @@ function next(){
             numeros[a].innerHTML=contador;
         }
     }
+    pag_actual();
 }
 function prew(){
-    let numeros = document.querySelectorAll('#numero');
+    let numeros = document.querySelectorAll('.numero');
     let contador = Number(numeros[0].getAttribute('data-id'));
     let max = Number(numeros[2].getAttribute('data-id'));
     if (contador>1) {
@@ -32,12 +44,14 @@ function prew(){
             numeros[a].innerHTML=max;
         }
     }
+    pag_actual();
 }
 function roket(){
     fetch('https://api.spacexdata.com/v4/rockets')
     .then(res => res.json())
     .then(info=>{
         len_data=info.length;
+        pag_actual();
         document.querySelector('.nombre').innerHTML=`<h1>${info[cohete].name}</h1>`
         document.querySelector(".info1").innerHTML=`
         <div class="seccion">

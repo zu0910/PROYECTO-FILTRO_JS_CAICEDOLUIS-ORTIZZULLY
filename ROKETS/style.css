@@ -103,7 +103,6 @@ h1{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    padding: 1rem;
     justify-content: space-evenly;
 }
 .info1{
@@ -240,6 +239,9 @@ progress{
 }
 .paginacion button:hover{
     background-color: #298bfe;
+}
+#pag{
+    background-color: #2930fe;
 }
 @media(max-width:880px){
     .info2{

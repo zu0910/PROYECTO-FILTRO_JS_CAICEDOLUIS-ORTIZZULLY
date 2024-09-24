@@ -112,18 +112,22 @@ body{
     font-size: clamp(1rem, 5vw, 1.3rem);
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     font-family: light;
     color: white;
 }
 #information{
+    border: 2px solid white;
     text-align: center;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    width: 25rem;
     justify-content: space-between;
     color: white;
     font-size: bold;
-    font-size: clamp(1rem, 5vw, 2rem);
+    font-size: clamp(1rem, 5vw, 1.3rem);
+    padding: 1rem;
+    margin: 4rem 5rem;
+
 }
 .last_up{
     color: white;
@@ -178,11 +182,6 @@ body{
     display: flex;
     justify-content: center;
 }
-.parte3{
-    width: 20%;
-    height: 100%;
-    padding-bottom: 2rem;
-}
 .imagenes{
     width: 20vw;
     height: 20vw;
@@ -195,9 +194,6 @@ body{
     width: 20vw;
     height: 15vw;
 }
-
-
-
 .paginacion{
     position: absolute;
     position: fixed;
@@ -216,4 +212,54 @@ body{
 }
 .paginacion button:hover{
     background-color: #298bfe;
+}
+@media (max-width:800px){
+    body{
+        width: 100%;
+        height: auto;
+        overflow-y: scroll
+    }
+    #import{
+        width: 18rem;
+    }
+    #all{
+        flex-wrap: wrap;
+    }
+    .contenido{
+        margin: 4rem 1.3rem;
+        width: 20rem;
+    }
+    #information{
+        width: 20rem;
+        margin: 4rem 1.5rem;
+    }
+    .last_up{
+        margin-left: 1.3rem;
+        width: 20rem;
+    }
+    #left{
+        overflow-y: scroll;
+        margin-top: -66rem;
+        width: 22rem;
+        margin-left: 1.2rem;
+    }
+    #lanzamientos{
+        padding: 2rem;
+        width: 17rem;
+        flex-direction: column;
+    }
+    #details{
+        width: 15rem;
+        font-size: 1rem;
+        text-align: center;
+    }
+    .imagenes{
+        width: 40vw;
+        height: 30vw;
+        align-items: center;
+    }
+    .imagenes img{
+        width: 40vw;
+        height: 25vw;
+    }
 }

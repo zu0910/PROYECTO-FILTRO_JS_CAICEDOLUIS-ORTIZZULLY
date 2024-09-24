@@ -48,9 +48,18 @@
 body{
     flex-wrap: wrap;
     overflow-x: hidden;
-    background: linear-gradient(#171930,#363757);
     width: 100vw;
     height: 100vh;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(217deg, #13142D, rgba(255, 0, 0, 0) 100%),
+        linear-gradient(127deg, #13142D, #69AEFF 50.45%),
+        linear-gradient(127deg, #FFFFFF, #69AEFF 50.45%);
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-size: cover;
 }
 .botones{
     position: fixed;
@@ -100,9 +109,7 @@ body{
     text-align: center;
 }
 #right{
-    
     width: 35rem;
-    height: 100rem;
 }
 .contenido{
     border: 2px solid white;
@@ -141,17 +148,19 @@ body{
 #left{
     margin-top: 4rem;
     overflow-y: scroll;
+    width: 65%;
     height: 44rem;
     border: 1px solid white;
 }
 #lanzamientos{
-    padding: 2rem;
-    border: 0.1px solid white;
-    width: 75rem;
+    border-top: 1px solid white;
+    width: 100%;
     display: flex;
+    flex-wrap: wrap;
 }
 #info_lanzamiento{
     width: 50%;
+    min-width: 20rem;
 }
 #import{
     display: flex;
@@ -195,71 +204,86 @@ body{
     height: 15vw;
 }
 .paginacion{
-    position: absolute;
     position: fixed;
     right: 5rem;   
-    bottom: 4rem;
+    bottom: 5rem;
     display: flex;
     border-radius: 10px;
-    border: solid rgb(255, 255, 255);
     overflow: hidden;
+    backdrop-filter: blur(20px);
 }
 .paginacion button{
     color: white;
     padding: 0.5rem 0.7rem;
-    background-color: #1a1c48;
+    background-color: inherit;
     border: none;
 }
 .paginacion button:hover{
-    background-color: #298bfe;
+    background-color: #14162C;
 }
-@media (max-width:800px){
+@media (max-width:930px){
     body{
         width: 100%;
         height: auto;
         overflow-y: scroll
     }
+    #right{
+        width: 100%;
+    }
     #import{
-        width: 18rem;
+        width: 100%;
+    }
+    #logo img{
+        width: 3rem;
+    }
+    #name{
+        font-size: 1rem;
     }
     #all{
         flex-wrap: wrap;
     }
     .contenido{
-        margin: 4rem 1.3rem;
-        width: 20rem;
+        margin: 4rem auto;
+        width: 80%;
     }
     #information{
-        width: 20rem;
-        margin: 4rem 1.5rem;
+        width: 80%;
+        margin: 4rem auto;
     }
     .last_up{
-        margin-left: 1.3rem;
-        width: 20rem;
+        margin: 0 auto;
+        width: 80%;
     }
     #left{
-        overflow-y: scroll;
-        margin-top: -66rem;
-        width: 22rem;
-        margin-left: 1.2rem;
+        margin: 0 auto;
+        width: 80%;
+        margin-bottom: 10rem;
     }
     #lanzamientos{
-        padding: 2rem;
-        width: 17rem;
-        flex-direction: column;
+        padding: 0;
+        width: 100%;
+        margin: 0 auto;
+    }
+    #info_lanzamiento{
+        width: 80%;
     }
     #details{
-        width: 15rem;
         font-size: 1rem;
-        text-align: center;
+        width: 80%;
+        padding: 1rem;
+    }
+    #pictures{
+        margin: 0 auto;
     }
     .imagenes{
         width: 40vw;
-        height: 30vw;
-        align-items: center;
+        height: 35vw;
     }
     .imagenes img{
         width: 40vw;
-        height: 25vw;
+        height: 30vw;
+    }
+    .botones{
+        width: 20rem;
     }
 }

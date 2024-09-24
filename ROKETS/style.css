@@ -43,7 +43,9 @@
 }
 body{
     overflow-x: hidden;
-    background: linear-gradient(#171930,#363757);
+    background: linear-gradient(217deg, #13142D, rgba(255, 0, 0, 0) 100%),
+        linear-gradient(127deg, #13142D, #69AEFF 50.45%),
+        linear-gradient(127deg, #FFFFFF, #69AEFF 50.45%);
     width: 100vw;
     min-height: 100vh;
     background-size: contain;
@@ -162,14 +164,15 @@ progress{
     overflow-x: scroll;
     gap: 1rem;
     align-items: center;
-    height: 30rem;
+    height: 36rem;
 }
 .carousel__item{
     margin-top: 15rem;
 }
 .carousel__item img{
-    min-width: 15rem;
-    width: 100%;
+    min-width: 13rem;
+    width: 20vw;
+    border-radius: 10px;
 }
 .parte3{
     width: 20%;
@@ -222,26 +225,26 @@ progress{
     text-align: end;
 }
 .paginacion{
-    position: absolute;
     position: fixed;
     right: 2rem;
     bottom: 5rem;
     display: flex;
     border-radius: 10px;
-    border: solid rgb(255, 255, 255);
     overflow: hidden;
+    gap: 0px;
+    backdrop-filter: blur(20px);
 }
 .paginacion button{
+    background-color: inherit;
     color: white;
     padding: 0.5rem 0.7rem;
-    background-color: #1a1c48;
     border: none;
 }
 .paginacion button:hover{
-    background-color: #298bfe;
+    background-color: #191b3fdf;
 }
 #pag{
-    background-color: #2930fe;
+    background-color: #14162C;
 }
 @media(max-width:880px){
     .info2{
@@ -264,6 +267,9 @@ progress{
     .parte1,.parte2,.parte3{
         margin: 0 auto ;
         width: 90%;
+    }
+    .parte2{
+        height: 14rem;
     }
     .carousel__item{
         margin-top: 3rem;

@@ -106,13 +106,12 @@ body{
 }
 #all{
     display: flex;
-    text-align: center;
 }
 #right{
     width: 35rem;
 }
 .contenido{
-    border: 2px solid white;
+    border-radius: 10px;
     margin: 4rem 5rem;
     padding: 1rem;
     width: 25rem;
@@ -122,9 +121,26 @@ body{
     font-family: light;
     color: white;
 }
+.reuse{
+    display: flex;
+}
+.water{
+    display: flex;
+}
+.land{
+    display: flex;
+}
+.serial{
+    display: flex;
+}
+.status{
+    display: flex;
+}
+.type{
+    display: flex;
+}
 #information{
-    border: 2px solid white;
-    text-align: center;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     width: 25rem;
@@ -134,18 +150,17 @@ body{
     font-size: clamp(1rem, 5vw, 1.3rem);
     padding: 1rem;
     margin: 4rem 5rem;
-
 }
 .last_up{
     color: white;
     font-family: regular;
-    border: 2px solid white;
     margin-left: 5rem;
     width: 25rem;
     padding: 1rem;
     font-size: clamp(1rem, 3vw, 1.2rem);
 }
 #left{
+    border-radius: 20px;
     margin-top: 4rem;
     overflow-y: scroll;
     width: 65%;
@@ -200,6 +215,7 @@ body{
     align-items: center;
 }
 .imagenes img{
+    border-radius: 10px;
     width: 20vw;
     height: 15vw;
 }

@@ -43,25 +43,38 @@ function capsule(){
         
 
         document.querySelector(".reuse").innerHTML=`
-        <p>Reuse Count ${cap[cohete].reuse_count}</p>
+        <img src="../icons/mech.svg" alt="">
+        <h4>Reuse Count :</h4>
+        <p>${cap[cohete].reuse_count}</p>
         `
         document.querySelector(".water").innerHTML=`
-        <p>Water landings ${cap[cohete].water_landings}</p>
+        <img src="../icons/mech.svg" alt="">
+        <h4>Water landings :</h4>
+        <p>${cap[cohete].water_landings}</p>
         `
         document.querySelector(".land").innerHTML=`
-        <p>Land landings ${cap[cohete].land_landings}</p>
+        <img src="../icons/mech.svg" alt="">
+        <h4>Land landings :</h4>
+        <p>${cap[cohete].land_landings}</p>
         `
         
         document.querySelector(".serial").innerHTML=`
+        <img src="../icons/mech.svg" alt="">
+        <h4>Serial :</h4>
         <p>${cap[cohete].serial}</p>
         `
         document.querySelector(".status").innerHTML=`
+        <img src="../icons/mech.svg" alt="">
+        <h4>Status :</h4>
         <p>${cap[cohete].status}</p>
         `
         document.querySelector(".type").innerHTML=`
+        <img src="../icons/mech.svg" alt="">
+        <h4>Type :</h4>
         <p>${cap[cohete].type}</p>
         `
         document.querySelector(".last_up").innerHTML=`
+        <h4>Last Update :</h4>
         <p>${cap[cohete].last_update}</p>
 
         `

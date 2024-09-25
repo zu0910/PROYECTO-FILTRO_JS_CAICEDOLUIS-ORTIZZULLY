@@ -41,77 +41,91 @@ function capsule(){
     .then(cap => {
         len_data=cap.length;
         
-
-        document.querySelector(".reuse").innerHTML=`
-        <img src="../icons/mech.svg" alt="">
-        <h4>Reuse Count :</h4>
-        <p>${cap[cohete].reuse_count}</p>
+        document.querySelector(".contenido").innerHTML=`
+            <div id="info" class="reuse"><p class="conte">${cap[cohete].reuse_count}</p><h3>Reuse Count</h3></div>
+            <div id="info" class="water"><p class="conte">${cap[cohete].water_landings}</p><h3>Water Landings</h3></div>
+            <div id="info" class="land"><p class="conte">${cap[cohete].land_landings}</p><h3>Land Landings</h3></div>
+            <div id="info" class="serial"><p class="conte">${cap[cohete].serial}</p><h3>Serial</h3></div>
+            <div id="info" class="status"><p class="conte">${cap[cohete].status}</p><h3>Status</h3></div>
+            <div id="info" class="type"><p class="conte">${cap[cohete].type}</p><h3>Type</h3></div>
         `
-        document.querySelector(".water").innerHTML=`
-        <img src="../icons/mech.svg" alt="">
-        <h4>Water landings :</h4>
-        <p>${cap[cohete].water_landings}</p>
-        `
-        document.querySelector(".land").innerHTML=`
-        <img src="../icons/mech.svg" alt="">
-        <h4>Land landings :</h4>
-        <p>${cap[cohete].land_landings}</p>
-        `
+       
+       
         
-        document.querySelector(".serial").innerHTML=`
-        <img src="../icons/mech.svg" alt="">
-        <h4>Serial :</h4>
-        <p>${cap[cohete].serial}</p>
-        `
-        document.querySelector(".status").innerHTML=`
-        <img src="../icons/mech.svg" alt="">
-        <h4>Status :</h4>
-        <p>${cap[cohete].status}</p>
-        `
-        document.querySelector(".type").innerHTML=`
-        <img src="../icons/mech.svg" alt="">
-        <h4>Type :</h4>
-        <p>${cap[cohete].type}</p>
-        `
         document.querySelector(".last_up").innerHTML=`
         <h4>Last Update :</h4>
         <p>${cap[cohete].last_update}</p>
 
         `
         let numero = 0;
+        let des=0;
         document.getElementById("left").innerHTML=""
         
         for (const id of cap[cohete].launches){
-            
+            let id_des = "details"+des;
             let id_img = "imagenes"+numero;
             fetch("https://api.spacexdata.com/v4/launches/"+id)
             .then( res => res.json())
             .then( lanza => {
+                console.log(id);
+                
                 console.log(lanza);
                 document.getElementById("left").innerHTML+=`
+                
                 <div id="lanzamientos">
-                    <div id="info_lanzamiento">
-                        <div id="import">
-                            <div id="logo">
-                            <img src="${lanza.links.patch.small}">
-                            </div>
-                            <div id="name">${lanza.name}</div>
-                        </div>
-                        <div id="details">${lanza.details}</div>
+                    <div id="logo_name">
+                        <div id="logo"><img src="${lanza.links.patch.small}"></div>
+                        <div id="name">${lanza.name}</div>
                     </div>
                     <div id="pictures">
-                            <div id="${id_img}" class="imagenes"></div>
-                        </div>
+                        <div id="${id_img}" class="imagenes"></div>
                     </div>
+                    <div id="${id_des}" class="details"></div>
                 </div>
                 `
-                for (const img of lanza.links.flickr.original){
-                    document.getElementById(id_img).innerHTML+=`
-                    <div class="carousel__item"><img src="${img}" referrerpolicy="no-referrer"></div>
+                if (lanza.links.flickr.original=="") {
+                    fetch('https://66e45b7dd2405277ed1408c9.mockapi.io/spacex/1')
+                    .then( res => res.json())
+                    .then(api=>{
+                        
+                        let max=api.imagenes.length-1;
+                        
+                        for ( let i=0; i<5; i++){
+                            let imagen=Math.floor(Math.random()*max);
+                            
+                            document.getElementById(id_img).innerHTML+=`
+                            <div class="carousel__item"><img src="${api.imagenes[imagen]}" referrerpolicy="no-referrer"></div>
+
+                            `
+                        }
+                    });
+                }
+                else{
+                    for (const img of lanza.links.flickr.original){
+                        document.getElementById(id_img).innerHTML+=`
+                        <div class="carousel__item"><img src="${img}" referrerpolicy="no-referrer"></div>
+                        `
+                    }
+                }
+                if(lanza.details==null){
+                    fetch('https://66e45b7dd2405277ed1408c9.mockapi.io/spacex/1')
+                    .then( res => res.json())
+                    .then(api=>{
+                        let min=api.descripcion.length-1;
+                        let descrip = Math.floor(Math.random()*min);
+                        document.getElementById(id_des).innerHTML=`
+                        <p>${api.descripcion[descrip]}</p>
+                        `
+                    })
+                }
+                else{
+                    document.getElementById(id_des).innerHTML=`
+                    <p>${lanza.details}</p>
                     `
                 }
             })
             numero+=1;
+            des+=1;
         }
     })
 

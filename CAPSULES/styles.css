@@ -47,19 +47,11 @@
 }
 body{
     flex-wrap: wrap;
-    overflow-x: hidden;
+    min-height: 100vh;
     width: 100vw;
-    height: 100vh;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
     background: linear-gradient(217deg, #13142D, rgba(255, 0, 0, 0) 100%),
         linear-gradient(127deg, #13142D, #69AEFF 50.45%),
         linear-gradient(127deg, #FFFFFF, #69AEFF 50.45%);
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    background-size: cover;
 }
 .botones{
     position: fixed;
@@ -105,104 +97,58 @@ body{
     background-color: white;
 }
 #all{
-    display: flex;
 }
-#right{
-    width: 35rem;
-}
-.contenido{
-    border-radius: 10px;
-    margin: 4rem 5rem;
-    padding: 1rem;
-    width: 25rem;
-    font-size: clamp(1rem, 5vw, 1.3rem);
+#top{
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    font-family: light;
-    color: white;
-}
-.reuse{
-    display: flex;
-}
-.water{
-    display: flex;
-}
-.land{
-    display: flex;
-}
-.serial{
-    display: flex;
-}
-.status{
-    display: flex;
-}
-.type{
-    display: flex;
-}
-#information{
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    width: 25rem;
     justify-content: space-between;
-    color: white;
-    font-size: bold;
-    font-size: clamp(1rem, 5vw, 1.3rem);
-    padding: 1rem;
-    margin: 4rem 5rem;
+    padding: 2rem;
+}
+#logotipo img{
+    width: 15rem;
 }
 .last_up{
+    margin-right: 7rem;
     color: white;
     font-family: regular;
-    margin-left: 5rem;
-    width: 25rem;
-    padding: 1rem;
     font-size: clamp(1rem, 3vw, 1.2rem);
 }
 #left{
     border-radius: 20px;
-    margin-top: 4rem;
-    overflow-y: scroll;
-    width: 65%;
-    height: 44rem;
+    margin: 0 auto;
+    width: 50%;
     border: 1px solid white;
 }
 #lanzamientos{
-    border-top: 1px solid white;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
 }
-#info_lanzamiento{
-    width: 50%;
-    min-width: 20rem;
-}
-#import{
+#logo_name{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 2rem;
     height: 5rem;
     width: 100%;
+    margin-top: 2rem;
 }
 #name{
     color: white;
-    font-size: clamp(2rem, 5vw, 2rem);
+    font-size: clamp(1rem, 5vw, 2rem);
     font-family: bold;
 }
 #logo img{
     width: 5rem;
-    filter: drop-shadow(3px 4px 15px  white);
 }
-#details{
+.details{
     font-family: light;
     font-size: 1.3rem;
     color: white;
     padding: 2rem;
-    text-align: start;
 }
 #pictures{
-    width: 50%;
+    width: 40%;
     display: flex;
     justify-content: center;
 }
@@ -218,6 +164,31 @@ body{
     border-radius: 10px;
     width: 20vw;
     height: 15vw;
+}
+.contenido{
+    margin: 2rem auto;
+    width: 55rem;
+    
+    display: flex;
+    justify-content: space-around;
+    font-family: light;
+    color: white;
+}
+#info{
+    width: 5rem;
+    background-color: #13142D;
+    height: 5rem;
+    border-radius: 100%;
+    gap: 2rem;
+}
+p.conte{
+    text-align: center;
+    margin: 1.8rem 0;
+    font-size: clamp(1rem, 5vw, 0.9rem);
+}
+h3{
+    text-align: center;
+    font-family: bold;
 }
 .paginacion{
     position: fixed;

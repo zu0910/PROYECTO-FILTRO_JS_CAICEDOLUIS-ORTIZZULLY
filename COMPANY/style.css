@@ -10,40 +10,9 @@
     font-family: bold;
     src: url(../Fuentes/Roboto-Bold.ttf);
 }
-:root{
-    --color--one: #14162C;
-    --color--one--rgba: #191b3fdf;
-    --color--two: #cfcfd1;
-    --color--three: #298bfe;
-    --color--four: #e52d2d;
-    --color--five: #ffffff;
-    --color--six: #ffd733;
-
-    --layout-description-container-x: 10px;
-    --layout-description-container-y: 10px;
-}
-
 *{
     margin: 0;
-}
-*::-webkit-scrollbar {
-    height: 12px;
-    width: 10px;
-}
-
-*::-webkit-scrollbar-track {
-    background-color: var(--color--five);
-}
-
-*::-webkit-scrollbar-track:hover,
-*::-webkit-scrollbar-thumb:hover {
-    cursor: pointer;
-}
-
-*::-webkit-scrollbar-thumb {
-
-    border: 1px solid var(--color--five);
-    background-color: var(--color--one--rgba);
+    padding: 0;
 }
 body{
     width: 100vw;
@@ -51,15 +20,22 @@ body{
     background: linear-gradient(217deg, #13142D, rgba(255, 0, 0, 0) 100%),
         linear-gradient(127deg, #13142D, #69AEFF 50.45%),
         linear-gradient(127deg, #FFFFFF, #69AEFF 50.45%);
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    
 }
 #principal{
+    
     display: flex;
     flex-wrap: wrap;
-    padding-bottom: 8rem;
+    margin: 5rem 5rem;
 }
 #left{
+    backdrop-filter: blur(1rem);
     min-width: 25rem;
-    width: 65%;
+    width: 60%;
+    border-radius: 50px;
     border: 2px solid white;
 }
 #parte1{
@@ -68,8 +44,8 @@ body{
     flex-wrap: wrap;
 }
 #logo img{
-    width: 12rem;
-    margin: 1rem 2rem;
+    width: 15rem;
+    margin: 2rem 3rem;
 }
 #img_sede{
     min-width: 10rem;
@@ -77,53 +53,77 @@ body{
 }
 #img_sede img{
     width: 100%;
-    border-radius: 5px;
+    border-radius: 30px;
 }
 #info_sede{
     width: 30%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: start;
     color: white;
+}
+#addres{
+    display: flex;
+}
+#city{
+    display: flex;
+}
+#states{
+    display: flex;
+}
+#employ{
+    display: flex;
+}
+h4{
+    padding-left: 1rem;
+    font-size: clamp(1rem, 2vw, 1.8rem);
     font-family: regular;
 }
-#info_sede div{
-    border: solid 2px white;
-    text-align: center;
-    width: 60%;
-    padding: 0.2rem;
+p{
+    padding-left: 1rem;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-family: light;
 }
+img#iconos{
+    width: 2rem;
+}
+
 #resumen{
-    border: solid 2px white;
-    width: 15rem;
+    text-align: center;
+    color: white;
+    width: 30rem;
+}
+#list{
+    display: flex;
 }
 #parte2{
     display: flex;
     margin-top: 2rem;
     justify-content: space-evenly;
     color: white;
-    font-family: regular;
     font-size: clamp(1rem, 2vw, 2rem);
 }
 #parte3{
-    border: solid 2px white;
+    border: 1px solid white;
+    border-radius: 50px;
+    backdrop-filter: blur(100%);
     padding: 1rem;
     width: 50%;
-    margin: 2rem;
+    margin: 2rem auto;
     display: flex;
     justify-content: space-evenly;
 }
-#parte3 div{
+#parte3 div img{
     width: 3rem;
     height: 3rem;
-    background-color: #cfcfd1;
     border-radius: 12px;
 }
 #right{
-    width: 33%;
-    border: solid 1px white;
+    border-radius: 50px;
+    width: 30%;
     display: flex;
+    margin-left: 9rem;
 }
 #fundador{
     max-width: 18rem;
@@ -131,14 +131,16 @@ body{
     min-height: 25rem;
     height: 80%;
     border: 15px solid white;
-    border-radius: 7px;
-    margin: 2rem auto;
+    border-radius: 50px;
+    margin: 3rem auto;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: space-evenly;
+    color: white;
+    font-size: clamp(1rem, 5vw, 2rem);
 }
-#img_funda{
+#img_funda img{
     width: 7rem;
     height: 7rem;
     border-radius: 50%;
@@ -193,17 +195,61 @@ body{
 @media(max-width:725px){
     #principal{
         flex-direction: column-reverse;
+        margin: 5rem 0;
     }
     #left{
-        width: 80%;
+        width: 89%;
         min-width: 0;
         margin: 1rem auto;
+    }
+    #img_sede img{
+        width: 11rem;
+        margin-top: 0.5rem;
     }
     #right{
         width: 80%;
         margin: 1rem auto;
+        
     }
-    #parte3 div{
+    #info_sede{
+        width: 30%;
+        margin-bottom: 0;
+    }
+    #addres{
+        flex-wrap: wrap;
+    }
+    #city{
+        flex-wrap: wrap;
+    }
+    #states{
+        flex-wrap: wrap;
+    }
+    #employ{
+        flex-wrap: wrap;
+    }
+    h4{
+        padding-left: 0.2rem;
+        font-size: clamp(1rem, 2vw, 1.5rem);
+    }
+    p{
+        padding-left: 0;
+        font-size: clamp(1rem, 2vw, 1.5rem);
+    }
+    img#iconos{
+        width: 1rem;
+    }
+    #resumen{
+        margin-top: 2rem;
+        width: 15rem;
+    }
+    #list{
+        flex-wrap: wrap;
+    }
+    #parte2{
+        margin-left: 2rem;
+        width: 20rem;
+    }
+    #parte3 div img{
         width: 1.5rem;
         height: 1.5rem;
         border-radius: 5px;

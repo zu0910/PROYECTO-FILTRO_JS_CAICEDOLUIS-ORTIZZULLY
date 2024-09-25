@@ -20,23 +20,21 @@ body{
     background: linear-gradient(217deg, #13142D, rgba(255, 0, 0, 0) 100%),
         linear-gradient(127deg, #13142D, #69AEFF 50.45%),
         linear-gradient(127deg, #FFFFFF, #69AEFF 50.45%);
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
     
 }
 #principal{
-    
     display: flex;
     flex-wrap: wrap;
-    margin: 5rem 5rem;
+    margin: 4rem 4rem;
+    gap: 2rem;
 }
 #left{
     backdrop-filter: blur(1rem);
     min-width: 25rem;
     width: 60%;
-    border-radius: 50px;
+    border-radius: 30px;
     border: 2px solid white;
+    margin: auto;
 }
 #parte1{
     display: flex;
@@ -53,26 +51,17 @@ body{
 }
 #img_sede img{
     width: 100%;
-    border-radius: 30px;
+    border-radius: 15px;
 }
 #info_sede{
-    width: 30%;
+    min-width: 15rem;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: start;
     color: white;
 }
-#addres{
-    display: flex;
-}
-#city{
-    display: flex;
-}
-#states{
-    display: flex;
-}
-#employ{
+#info_sede div{
     display: flex;
 }
 h4{
@@ -80,29 +69,26 @@ h4{
     font-size: clamp(1rem, 2vw, 1.8rem);
     font-family: regular;
 }
-p{
+#principal p{
     padding-left: 1rem;
     font-size: clamp(1rem, 2vw, 1.5rem);
     font-family: light;
 }
-img#iconos{
-    width: 2rem;
-}
-
 #resumen{
     text-align: center;
     color: white;
-    width: 30rem;
+    margin-top: 2rem;
+    width: 60%;
 }
 #list{
     display: flex;
+    flex-wrap: wrap;
 }
 #parte2{
     display: flex;
     margin-top: 2rem;
     justify-content: space-evenly;
     color: white;
-    font-size: clamp(1rem, 2vw, 2rem);
 }
 #parte3{
     border: 1px solid white;
@@ -120,18 +106,16 @@ img#iconos{
     border-radius: 12px;
 }
 #right{
-    border-radius: 50px;
-    width: 30%;
+    width: 33%;
     display: flex;
-    margin-left: 9rem;
+    min-width: 20rem;
 }
 #fundador{
-    max-width: 18rem;
-    width: 80%;
-    min-height: 25rem;
-    height: 80%;
-    border: 15px solid white;
-    border-radius: 50px;
+    max-width: 25rem;
+    width: 90%;
+    min-height: 20rem;
+    border: 2px solid white;
+    border-radius: 15px;
     margin: 3rem auto;
     display: flex;
     align-items: center;
@@ -139,10 +123,10 @@ img#iconos{
     justify-content: space-evenly;
     color: white;
     font-size: clamp(1rem, 5vw, 2rem);
+    font-family: regular;
 }
 #img_funda img{
-    width: 7rem;
-    height: 7rem;
+    width: 10rem;
     border-radius: 50%;
     background-color: #cfcfd1;
 }
@@ -192,62 +176,32 @@ img#iconos{
     height: 4%;
     background-color: white;
 }
-@media(max-width:725px){
+@media(max-width:1020px){
     #principal{
         flex-direction: column-reverse;
-        margin: 5rem 0;
-    }
-    #left{
-        width: 89%;
-        min-width: 0;
-        margin: 1rem auto;
-    }
-    #img_sede img{
-        width: 11rem;
-        margin-top: 0.5rem;
+        margin: 1rem 0;
+        margin-bottom: 10rem;
     }
     #right{
         width: 80%;
         margin: 1rem auto;
-        
     }
-    #info_sede{
-        width: 30%;
-        margin-bottom: 0;
+    #left{
+        width: 80%;
+        min-width: 0;
+        margin: 1rem auto;
     }
-    #addres{
-        flex-wrap: wrap;
+    #fundador{
+        margin: 1rem auto;
     }
-    #city{
-        flex-wrap: wrap;
-    }
-    #states{
-        flex-wrap: wrap;
-    }
-    #employ{
-        flex-wrap: wrap;
-    }
-    h4{
-        padding-left: 0.2rem;
-        font-size: clamp(1rem, 2vw, 1.5rem);
-    }
-    p{
-        padding-left: 0;
-        font-size: clamp(1rem, 2vw, 1.5rem);
-    }
-    img#iconos{
-        width: 1rem;
-    }
+}
+@media(max-width:725px){
     #resumen{
         margin-top: 2rem;
         width: 15rem;
     }
-    #list{
-        flex-wrap: wrap;
-    }
-    #parte2{
-        margin-left: 2rem;
-        width: 20rem;
+    #iconos{
+        width: 1.5rem;
     }
     #parte3 div img{
         width: 1.5rem;
@@ -256,5 +210,15 @@ img#iconos{
     }
     .botones{
         width: 20rem;
+    }
+    #list{
+        flex-direction: column;
+    }
+    #list h4{
+        margin-top: -1.5rem;
+        margin-left: 1.5rem;
+    }
+    #list p{
+        margin-left: 1.5rem;
     }
 }

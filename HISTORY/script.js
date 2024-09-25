@@ -1,3 +1,64 @@
+class principal extends HTMLElement{
+    constructor(){
+        super();
+        this.innerHTML=`
+        <div class="principal">
+            <div class="titulo"><div class="load"></div></div>
+            <div class="details"><div class="load"></div></div>
+            <div class="events1"><div class="load"></div></div>
+            <div class="events2"><div class="load"></div></div>
+            <div class="article"><div class="load"></div></div>
+        </div>
+        `;
+    }
+}
+class paginacion extends HTMLElement{
+    constructor(){
+        super();
+        this.innerHTML=`
+        <div class="paginacion">
+            <button id="prew" onclick="prew()"><</button>
+            <button class="numero" onmouseover="cambiar()" data-id="1">1</button>
+            <button class="numero" onmouseover="cambiar()" data-id="2">2</button>
+            <button class="numero" onmouseover="cambiar()" data-id="3">3</button>
+            <button id="next" onclick="next()">></button>
+        </div>
+        `;
+    }
+}
+class footer extends HTMLElement{
+    constructor(){
+        super();
+        this.innerHTML=`
+        <div class="botones">
+            <button class="icons">
+                <a href="../ROKETS/index.html">
+                    <img src="../icons/rocket.svg" alt="">
+                    <p>Rockets</p>
+                </a>
+            </button>
+            <button class="icons">
+                <a href="../CAPSULES/inde.html">
+                    <img src="../icons/capsule.svg" alt="">
+                    <p>Capsules</p>
+                </a>
+            </button>
+            <button class="icons">
+                <a href="../COMPANY/index.html">
+                    <img src="../icons/mech.svg" alt="">
+                    <p>Conpany</p>
+                </a>
+            </button>
+            <button class="icons actual"><img src="../icons/prop.svg" alt="">
+                <p>History</p>
+            </button>
+        </div>
+        `;
+    }
+}
+customElements.define('cont-principal',principal);
+customElements.define('cont-paginacion',paginacion);
+customElements.define('footer-nav',footer);
 let historia=0;
 let len_data;
 function pag_actual(){

@@ -193,7 +193,7 @@ progress{
         closest-side, 
         #1d1f38 85%, 
         transparent 85% 100%), 
-        conic-gradient(var(--color--three) 
+        conic-gradient(var(--color--three)
         80%, 
         transparent 0);  
     transform: rotate(180deg); 

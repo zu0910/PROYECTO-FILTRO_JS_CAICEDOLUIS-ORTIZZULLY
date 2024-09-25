@@ -1,3 +1,73 @@
+class principal extends HTMLElement{
+    constructor(){
+        super();
+        this.innerHTML=`
+        <div class="principal">
+            <div class="nombre">
+            </div>
+            <div class="tres">
+                <div class="info1">
+                    
+                </div>
+                <div class="info2">
+                    
+                </div>
+                <div class="info3">
+                    
+                </div>
+            </div>
+        </div>
+        `;
+    }
+}
+class paginacion extends HTMLElement{
+    constructor(){
+        super();
+        this.innerHTML=`
+        <div class="paginacion">
+            <button id="prew" onclick="prew()"><</button>
+            <button class="numero" onmouseover="cambiar()" data-id="1">1</button>
+            <button class="numero" onmouseover="cambiar()" data-id="2">2</button>
+            <button class="numero" onmouseover="cambiar()" data-id="3">3</button>
+            <button id="next" onclick="next()">></button>
+        </div>
+        `;
+    }
+}
+class footer extends HTMLElement{
+    constructor(){
+        super();
+        this.innerHTML=`
+        <div class="botones">
+            <button class="icons actual">
+                <img src="../icons/rocket.svg" alt="">
+                <p>Rockets</p>
+            </button>
+            <button class="icons">
+                <a href="../CAPSULES/inde.html">
+                    <img src="../icons/capsule.svg" alt="">
+                    <p>Capsules</p>
+                </a>
+            </button>
+            <button class="icons">
+                <a href="../COMPANY/index.html">
+                    <img src="../icons/mech.svg" alt="">
+                    <p>Conpany</p>
+                </a>
+            </button>
+            <button class="icons">
+                <a href="../HISTORY/index.html">
+                    <img src="../icons/prop.svg" alt="">
+                    <p>History</p>
+                </a>
+            </button>
+        </div>
+        `;
+    }
+}
+customElements.define('footer-nav',footer);
+customElements.define('cont-paginacion',paginacion);
+customElements.define('cont-principal',principal);
 let cohete=0;
 let len_data;
 function pag_actual(){
@@ -90,11 +160,21 @@ function roket(){
             </div>
         </div>
         `;
-        let aceleracion_atmosferica = parseInt((info[cohete].engines.thrust_sea_level.kN/1780)*100)
+        let aceleracion_atmosferica = parseInt((info[cohete].engines.thrust_sea_level.kN/1780)*100);
+        let color1;
+        if (aceleracion_atmosferica<32) {
+            color1='red'
+        }
+        else if (aceleracion_atmosferica>=33 && aceleracion_atmosferica<65) {
+            color1='#ffd733'
+        }
+        else if (aceleracion_atmosferica>=66) {
+            color1='#00ff15'
+        }
         document.querySelector(".info2").innerHTML=`
         <div class="parte1">
             <div class="item__progress__bar"
-                style="background: radial-gradient(closest-side, #1d1f38 85%, transparent 85% 100%), conic-gradient(var(--color--three) ${aceleracion_atmosferica}%, transparent 0);">
+                style="background: radial-gradient(closest-side, #1d1f38 85%, transparent 85% 100%), conic-gradient(${color1} ${aceleracion_atmosferica}%, transparent 0);">
                 <div class="progress__value"><strong>Atmospheric acceleration</strong><small>${aceleracion_atmosferica}
                         %</small><small>${info[cohete].engines.thrust_sea_level.kN} kN <br> ${info[cohete].engines.thrust_sea_level.lbf} Lbf</small></div>
             </div>
@@ -159,9 +239,19 @@ function roket(){
             `;
         });
         let Speed_space = parseInt((info[cohete].engines.thrust_vacuum.kN/1960)*100);
+        let color2;
+        if (Speed_space<32) {
+            color2='red'
+        }
+        else if (Speed_space>=33 && Speed_space<65) {
+            color2='#ffd733'
+        }
+        else if (Speed_space>=66) {
+            color2='#00ff15'
+        }
         document.querySelector('.parte3').innerHTML=`
         <div class="item__progress__bar"
-            style="background: radial-gradient(closest-side, #1d1f38 85%, transparent 85% 100%), conic-gradient(var(--color--three) ${Speed_space}%, transparent 0);">
+            style="background: radial-gradient(closest-side, #1d1f38 85%, transparent 85% 100%), conic-gradient(${color2} ${Speed_space}%, transparent 0);">
             <div class="progress__value"><strong>Speed in space</strong><small>${Speed_space}
                     %</small><small>${info[cohete].engines.thrust_vacuum.kN} kN <br> ${info[cohete].engines.thrust_vacuum.lbf} Lbf</small></div>
         </div>

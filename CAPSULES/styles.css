@@ -46,6 +46,7 @@
     background-color: var(--color--one--rgba);
 }
 body{
+    overflow-x: hidden;
     flex-wrap: wrap;
     min-height: 100vh;
     width: 100vw;
@@ -118,34 +119,40 @@ body{
     margin: 0 auto;
     width: 50%;
     border: 1px solid white;
+    overflow-x: auto; 
+    display: flex;
+    flex-wrap: nowrap;
+    scroll-snap-type: x mandatory;
 }
 #lanzamientos{
+    height: 60vh;
+    min-width: 100vw;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
 }
 #logo_name{
     display: flex;
-    align-items: center;
-    justify-content: center;
     gap: 2rem;
     height: 5rem;
     width: 100%;
-    margin-top: 2rem;
+    margin: 2rem 22rem;
 }
 #name{
     color: white;
-    font-size: clamp(1rem, 5vw, 2rem);
+    font-size: clamp(1rem, 5vw, 2.8rem);
     font-family: bold;
 }
 #logo img{
-    width: 5rem;
+    width: 6rem;
+    margin-top: -1rem;
 }
 .details{
     font-family: light;
     font-size: 1.3rem;
     color: white;
     padding: 2rem;
+    width: 45rem;
 }
 #pictures{
     width: 40%;

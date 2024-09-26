@@ -3,11 +3,25 @@ class principal extends HTMLElement{
         super();
         this.innerHTML=`
         <div class="principal">
-            <div class="titulo"><div class="load"></div></div>
-            <div class="details"><div class="load"></div></div>
-            <div class="events1"><div class="load"></div></div>
-            <div class="events2"><div class="load"></div></div>
-            <div class="article"><div class="load"></div></div>
+            <div class="titulo">
+                <div class="load"></div>
+            </div>
+            <div class="details">
+                <div class="load"></div>
+            </div>
+            <div class="center load">
+            </div>
+            <div class="rigth">
+                <div class="events1">
+                    <div class="load"></div>
+                </div>
+                <div class="events2">
+                    <div class="load"></div>
+                </div>
+                <div class="article">
+                    <div class="load"></div>
+                </div>
+            </div>
         </div>
         `;
     }
@@ -118,6 +132,6 @@ function roket(){
         document.querySelector('.events1').innerHTML=`<h2>Event Date (UTC)</h2><p class="p">${info[historia].event_date_utc}</p>`;
         document.querySelector('.events2').innerHTML=`<h2>Event Date (UNIX)</h2><p class="p">${info[historia].event_date_unix}</p>`;
         document.querySelector('.article').innerHTML=`<button class="btn"><a href="${info[historia].links.article}">ARTICLE</a></button>`;
-    });
+        document.querySelector('.center').innerHTML=`<iframe src="${info[historia].links.article}" frameborder="0"></iframe>`;    });
 };
 roket();

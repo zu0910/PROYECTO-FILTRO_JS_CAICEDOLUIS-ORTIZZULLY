@@ -33,6 +33,7 @@
 
 *::-webkit-scrollbar-track {
     background-color: var(--color--five);
+    border-radius: 5px;
 }
 
 *::-webkit-scrollbar-track:hover,
@@ -44,12 +45,13 @@
 
     border: 1px solid var(--color--five);
     background-color: var(--color--one--rgba);
+    border-radius: 5px;
 }
 body{
-    overflow-x: hidden;
     flex-wrap: wrap;
     min-height: 100vh;
     width: 100vw;
+    overflow-x: hidden;
     background: linear-gradient(217deg, #13142D, rgba(255, 0, 0, 0) 100%),
         linear-gradient(127deg, #13142D, #69AEFF 50.45%),
         linear-gradient(127deg, #FFFFFF, #69AEFF 50.45%);
@@ -98,12 +100,16 @@ body{
     background-color: white;
 }
 #all{
+    margin-bottom: 10rem;
+    min-height: 100vh;
 }
 #top{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 2rem;
+}
+#top div{
+    padding: 2rem 1rem;
 }
 #logotipo img{
     width: 15rem;
@@ -119,35 +125,34 @@ body{
     margin: 0 auto;
     width: 50%;
     border: 1px solid white;
-    overflow-x: auto; 
+    overflow-x: auto;
     display: flex;
-    flex-wrap: nowrap;
-    scroll-snap-type: x mandatory;
 }
 #lanzamientos{
-    height: 60vh;
-    min-width: 100vw;
-    width: 100%;
+    min-width: 100%;
     display: flex;
     flex-wrap: wrap;
+    margin: 0 auto;
 }
 #logo_name{
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 2rem;
     height: 5rem;
     width: 100%;
-    margin: 2rem 22rem;
+    margin-top: 1rem;
 }
 #name{
     color: white;
-    font-size: clamp(1rem, 5vw, 2.8rem);
+    font-size: clamp(1.5rem, 4vw, 2rem);
     font-family: bold;
 }
 #logo img{
     width: 6rem;
-    margin-top: -1rem;
 }
 .details{
+    margin: 0 auto;
     font-family: light;
     font-size: 1.3rem;
     color: white;
@@ -156,9 +161,10 @@ body{
 }
 #pictures{
     width: 40%;
-    display: flex;
-    justify-content: center;
+    margin: 2rem auto;
+    border-radius: 40px;
 }
+
 .imagenes{
     width: 20vw;
     height: 20vw;
@@ -174,24 +180,24 @@ body{
 }
 .contenido{
     margin: 2rem auto;
-    width: 55rem;
-    
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
     font-family: light;
     color: white;
 }
 #info{
-    width: 5rem;
-    background-color: #13142D;
-    height: 5rem;
-    border-radius: 100%;
+    width: 4rem;
+    border: #ffffff solid;
+    height: 4rem;
+    border-radius: 20px;
     gap: 2rem;
+    margin-top: 2rem;
 }
 p.conte{
     text-align: center;
-    margin: 1.8rem 0;
-    font-size: clamp(1rem, 5vw, 0.9rem);
+    margin: 1.5rem 0;
 }
 h3{
     text-align: center;
@@ -227,12 +233,6 @@ h3{
     #import{
         width: 100%;
     }
-    #logo img{
-        width: 3rem;
-    }
-    #name{
-        font-size: 1rem;
-    }
     #all{
         flex-wrap: wrap;
     }
@@ -251,26 +251,19 @@ h3{
     #left{
         margin: 0 auto;
         width: 80%;
-        margin-bottom: 10rem;
     }
     #lanzamientos{
         padding: 0;
         width: 100%;
         margin: 0 auto;
     }
-    #info_lanzamiento{
-        width: 80%;
-    }
     #details{
         font-size: 1rem;
         width: 80%;
         padding: 1rem;
     }
-    #pictures{
-        margin: 0 auto;
-    }
     .imagenes{
-        width: 40vw;
+        width: 100%;
         height: 35vw;
     }
     .imagenes img{
